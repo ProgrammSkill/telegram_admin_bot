@@ -253,7 +253,7 @@ async def deleting_messages(message: types.Message):
     for i in forbidden_words:
         if i in text:
             chat_id = message.chat.id
-            if chat_id != config.GROUP_ID:
+            if str(chat_id) != str(config.GROUP_ID):
                 await bot.send_message(chat_id, 'Я работаю только в Лицах Питера https://t.me/FacesPeterburg')
                 return
             await bot.delete_message(chat_id=chat_id, message_id=message.message_id)
