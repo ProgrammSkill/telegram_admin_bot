@@ -1,0 +1,3 @@
+aiogram==3.1.0
+pysqlite-binary==0.5.1.3380300
+python-dotenv==1.0.0
